@@ -8,7 +8,7 @@ export const Result = ({
     resetFormFC: Function;
 }) => {
     return (
-        <section className="bg-very-dark-cyan h-fit lg:h-full border-2 border-white py-8  px-6 lg:px-8 rounded-2xl lg:rounded-lg mt-10 lg:mt-0">
+        <section className="bg-very-dark-cyan h-fit lg:h-full border-2 border-white py-10  px-6 lg:px-8 rounded-2xl lg:rounded-lg mt-10 lg:mt-0">
             <div className="flex justify-between items-center mb-10">
                 <div className="flex flex-col">
                     <span className="block text-white font-bold text-lg">

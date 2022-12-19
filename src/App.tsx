@@ -15,7 +15,7 @@ function App() {
                 <header className="flex justify-center mb-16">
                     <img src={logo} alt="splitter logo" />
                 </header>
-                <section className="bg-white h-screen lg:h-fit border-2 border-white p-8 rounded-3xl lg:rounded-lg lg:grid lg:grid-cols-2 lg:gap-x-14 lg:w-[900px] shadow-sm drop-shadow-2xl">
+                <section className="bg-white h-screen lg:h-fit border-2 border-white px-8 pt-8 pb-10 rounded-t-3xl lg:rounded-lg lg:grid lg:grid-cols-2 lg:gap-x-14 lg:w-[900px] shadow-sm drop-shadow-2xl">
                     <TipForm
                         setResultFC={(result: { tip: number; total: number }) =>
                             setResult(result)
