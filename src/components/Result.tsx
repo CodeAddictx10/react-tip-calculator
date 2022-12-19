@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Result = ({
+const Result = ({
     result,
     resetFormFC,
 }: {
@@ -44,3 +44,5 @@ export const Result = ({
         </section>
     );
 };
+
+export default Result;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "./assets/images/logo.svg";
-import { Result } from "./components/Result";
+import Result from "./components/Result";
 import TipForm from "./components/TipForm";
 
 function App() {

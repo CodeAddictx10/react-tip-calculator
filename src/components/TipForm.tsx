@@ -20,6 +20,10 @@ const TipForm = ({
         people: boolean;
     }>({ bill: false, tip: false, people: false });
 
+    /**
+     * Set Form Input
+     * @param event React.ChangeEvent<HTMLInputElement>
+     */
     const setFormInput = (event: React.ChangeEvent<HTMLInputElement>) => {
         const name: string = event.target.name;
         let value: number | string = Number(event.target.value);
@@ -32,6 +36,9 @@ const TipForm = ({
             setErrorBag({ ...errorBag, [name]: Number(value) === 0 });
         }
     };
+    /**
+     * Handle form reset
+     */
     useEffect(() => {
         setForm({ bill: "", tip: "", people: "" });
         setResultFC({
@@ -40,6 +47,13 @@ const TipForm = ({
         });
     }, [isResetForm]);
 
+    /**
+     * Calculate tip
+     * @param bill number
+     * @param tip number
+     * @param people number
+     * @returns void
+     */
     const tipCalculatorHandler = (
         bill: number,
         tip: number,
@@ -53,7 +67,6 @@ const TipForm = ({
             tip: totalTip.toFixed(2),
             total: (bill + Number(totalTip) * people).toFixed(2),
         });
-        return;
     };
 
     return (
@@ -212,36 +225,4 @@ const TipForm = ({
     );
 };
 
-// const CustomSelectBox = ({
-//     amount,
-//     amountList,
-//     setTipFC,
-// }: {
-//     amount: number;
-//     amountList: number[];
-//     setTipFC: Function;
-// }): JSX.Element => {
-//     const setTipHandler = (amount: number) => {
-//         setTipFC(amount);
-//     };
-//     return (
-//             {
-//                 amountList.map((item) => {
-//                 let id = useId();
-//                 {/* <span
-//                     role="option"
-//                     className={`option py-3 lg:py-1 ${
-//                         amount === item && "bg-primary text-[#000]"
-//                     }`}
-//                     key={id}
-//                     onClick={() => setTipHandler(item)}>
-//                     {item}&#37;
-//                 </span> */}
-//                 {/*
-
-//
-
-//             );
-//             };
-// };
 export default TipForm;
