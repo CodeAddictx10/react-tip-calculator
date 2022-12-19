@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    html {
+        font-family: "Space Mono", monospace;
+    }
+    body {
+        @apply bg-secondary;
+    }
+
+    .customLabel {
+        @apply text-light-grayish-cyan block text-xs lg:text-sm font-bold;
+    }
+    .input {
+        @apply h-12 text-right block w-full bg-lighter-grayish-cyan rounded-md border-white text-[24px] text-very-dark-cyan font-semibold focus:border-primary focus:border-2 outline-0 border-0 appearance-none ring-0 focus-visible:outline-none px-4 py-5 hover:cursor-pointer;
+    }
+    .option {
+        @apply bg-very-dark-cyan text-white text-[24px] text-center rounded-md font-bold cursor-pointer   hover:text-[#000] hover:bg-primary hover:cursor-pointer;
+    }
+    .option:last-child {
+        @apply hover:bg-lighter-grayish-cyan;
+    }
+    .invalid {
+        @apply text-invalid text-xs lg:text-sm;
+    }
+}
+@layer utilities {
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+}
